@@ -9,35 +9,36 @@ export const Container = styled.nav`
   color: ${theme.colors.WHITE};
   ul {
     width: 100%;
-    li {
-      width: 100%;
-      height: 50px;
-      color: ${theme.colors.B60};
-      display: flex;
-      align-items: center;
-      padding: 0 35px;
-      font-size: 0;
-      cursor: pointer;
+  }
+`;
 
-      :hover {
-        color: ${theme.colors.WHITE};
-        background-color: ${theme.colors.HOVER};
-        svg {
-          fill: ${theme.colors.WHITE};
-        }
-      }
+export const List = styled.li<{ isPath?: boolean }>`
+  width: 100%;
+  height: 50px;
+  color: ${(prop) => (prop.isPath ? `#ffb800` : `${theme.colors.B60}`)};
+  background-color: ${(prop) => (prop.isPath ? `${theme.colors.HOVER}` : '')};
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  font-size: 0;
+  cursor: pointer;
 
-      svg {
-        fill: ${theme.colors.B60};
-        font-size: ${theme.fontSize.SEMI_M};
-        margin-right: 12px;
-      }
-      span {
-        height: 11px;
-        text-transform: uppercase;
-        font-size: ${theme.fontSize.SMALL};
-        font-weight: bold;
-      }
+  :hover {
+    color: ${theme.colors.WHITE};
+    background-color: ${theme.colors.HOVER};
+    svg {
+      fill: ${theme.colors.WHITE};
     }
+  }
+  svg {
+    fill: ${(prop) => (prop.isPath ? `#ffb800` : `${theme.colors.B60}`)};
+    font-size: ${theme.fontSize.SEMI_M};
+    margin-right: 12px;
+  }
+  span {
+    height: 11px;
+    text-transform: uppercase;
+    font-size: ${theme.fontSize.SMALL};
+    font-weight: bold;
   }
 `;

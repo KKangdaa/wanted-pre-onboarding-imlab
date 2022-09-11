@@ -31,7 +31,8 @@ const LayoutWrapper = styled.div`
 
 const SidebarWrapper = styled.div`
   width: 100%;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
+  height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -39,7 +40,8 @@ const SidebarWrapper = styled.div`
 
 const BodyWrapper = styled.div`
   width: calc(100vw - 220px);
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

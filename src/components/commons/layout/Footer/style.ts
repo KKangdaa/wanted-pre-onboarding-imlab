@@ -1,14 +1,14 @@
 import theme from '@styles/theme';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.footer`
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   border-top: 1px solid ${theme.colors.B80};
-  padding: 50px 80px;
+  padding: 50px;
 
   img {
     width: auto;

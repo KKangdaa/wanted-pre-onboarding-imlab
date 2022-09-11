@@ -7,7 +7,7 @@
 
 ## 배포 링크
 
-
+https://hotsix-imlab.netlify.app/
 
 <br/>
 
@@ -54,55 +54,49 @@ $ npm start
 
 ## 폴더 구조
 
-# 누군가 바꿔주세요
-
 ```
 root
+├── .babelrc
+├── .eslintrc
 ├── .vscode
 ├── .prettierrc
-├── .eslintrc
 ├── package-lock.json
 ├── package.json
-├── jsconfig.json
+├── tsconfig.json
 ├── public
 |   ├── favicon.ico
-|   ├── index.html
-|   ├── data
-|   └── images
+|   └── index.html
+├── config
+|   ├── webpack.common.js
+|   ├── webpack.dev.js
+|   └── webpack.prod.js
 └── src
+    ├── apis
+    ├── assets
     ├── components
-    ├── constants
     ├── hooks
-    ├── libs
     ├── pages
-    ├── recoil
     ├── routes
     ├── styles
-    ├── theme
-    ├── utils
     ├── App.jsx
+    ├── types.d.ts
     └── index.js
 ```
 
-# 누군가 바꿔주세요
-
 |폴더|구분|
 |:--|:--|
+|apis|api함수들을 모아둔 폴더|
+|assets|더미 및 이미지 등 로컬 파일|
 |components|코드 재사용을 위한 컴포넌트 관리형 폴더|
+|hooks|react의 커스텀 hook을 관리하는 폴더|
 |pages|url주소에 따른 페이지 구성 폴더|
-|libs|전역함수 및 변수 관리 폴더|
 |routes|라우팅 관련 처리 폴더|
 |styles|전역으로 사용하는 style 관리 폴더|
-|theme|재사용을 위한 CSS 관리 폴더|
-|utils|유틸 함수 관리 폴더|
-|constants|더미 및 이미지 등 로컬 파일|
 <br/>
-
-# 누군가 바꿔주세요
 
 ## 디자인 시안 by 강다현
 
-[피그마 바로가기]()
+[피그마 바로가기](https://www.figma.com/file/XfhbCGKRROJevroxACFMe6/MovieTrailer?node-id=0%3A1)
 
 <br />
 
@@ -134,11 +128,43 @@ root
 ## 기술 스택
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
-![TypeScript](https://img.shields.io/badge/typescript-%23323330.svg?style=for-the-badge&logo=typescript&logoColor=%23F7DF1E) 
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) 
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) 
-![Recoil](https://img.shields.io/badge/Recoil-007af4.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FscXVlXzEiIGRhdGEtbmFtZT0iQ2FscXVlIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI1NS4yMSA2MjMuOTEiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDp3aGl0ZX08L3N0eWxlPjwvZGVmcz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im03NC42MiAyNzcuNDYgMS4yNC0uMTMgMzQuNzgtMy4yOC01My40Ny01OC42NkE5Ni40NyA5Ni40NyAwIDAgMSAzMiAxNTAuM0gzYTEyNS4zIDEyNS4zIDAgMCAwIDMyLjggODQuNTdaTTE3Ny4xMyAzNDdsLTM2IDMuNCA1My4zMiA1OC41MUE5Ni40MSA5Ni40MSAwIDAgMSAyMTkuNjMgNDc0aDI4LjkyYTEyNS4yOCAxMjUuMjggMCAwIDAtMzIuNzYtODQuNTdaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjUzLjY5IDIzMS42OGMtNi4zMy0zMS4zLTMwLjg5LTU0LjA5LTYyLjU3LTU4LjA3bC02LjM1LS43OWE0OS42MSA0OS42MSAwIDAgMS00My4zNS00OS4xM3YtMjBhNTIuNzUgNTIuNzUgMCAxIDAtMjguOTEtLjM2djIwLjM4YTc4LjU2IDc4LjU2IDAgMCAwIDY4LjY1IDc3LjgybDYuMzYuOGMyMy4yNCAyLjkyIDM0Ljc4IDIwIDM3LjgzIDM1LjFzLS45MyAzNS4zMi0yMS4yMiA0N2E3My44MSA3My44MSAwIDAgMS0zMC4wNiA5LjYybC05NS42NiA5YTEwMi40NSAxMDIuNDUgMCAwIDAtNDEuOCAxMy4zOEM5IDMzMi40NS00LjgxIDM2MyAxLjUyIDM5NC4yOXMzMC44OSA1NC4wOCA2Mi41NyA1OC4wNmw2LjM1LjhhNDkuNiA0OS42IDAgMCAxIDQzLjM1IDQ5LjEydjE4YTUyLjc1IDUyLjc1IDAgMSAwIDI4LjkxLjI2di0xOC4yNmE3OC41NSA3OC41NSAwIDAgMC02OC42NS03Ny44MWwtNi4zNi0uOGMtMjMuMjQtMi45Mi0zNC43OC0yMC4wNS0zNy44My0zNS4xMXMuOTMtMzUuMzIgMjEuMjItNDdhNzMuNjggNzMuNjggMCAwIDEgMzAuMDYtOS42M2w5NS42Ni05YTEwMi40NSAxMDIuNDUgMCAwIDAgNDEuOC0xMy4zOGMyNy42NS0xNi4wMiA0MS40LTQ2LjU0IDM1LjA5LTc3Ljg2WiIvPjwvc3ZnPg==&logoColor=white)   
+![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white) 
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 <br />
 
+
 ## Best Practice
+### 1. 컴포넌트에서 tSX 파일과 styled-component 파일을 분리했습니다.  
+💡 이유 : styled-componet 파일이 길어지면서 한 파일 내에서 JSX 코드와 CSS 코드를 동시에 보기가 어려워져, 가독성을 위해 분리하였습니다. 추가적으로 style 컴포넌트에는 앞에 S.을 포함해 네이밍을 하여, 일반 컴포넌트와 구분하였습니다.
+
+### 2. 공통적으로 쓰는 컴포넌트를 Layout(/src/components/common/layout) 안에서 구성하고 Routes 파일에 적용했습니다. (Navigation, Footer, Header).  
+💡 이유 : 최대한 코드 양을 줄이기 위해서 이며, 코드가 많아지면 빌드 속도 및 렌더링 속도가 저하되기 때문입니다. 또한, import의 빈도도 줄일수 있습니다.
+
+### 3. 많은 컴포넌트, 코드를 export 해서 관리해야 하는 경우 index.ts 파일을 만들어 import 경로를 줄였습니다.  
+💡 이유 : import 경로가 길어지면 가독성이 떨어지고, 파일 추적이 불편하다는 단점이 있기때문입니다. 이를 줄이기 위해 각 root 폴더에 index.js 파일을 만들어 export default 핸들링을 했습니다.
+
+### 4. 무한스크롤 컴포넌트, useInfiQry 훅 분리로 재사용 가능하도록 추상화 하였습니다.  
+💡 이유 : 무한스크롤이 들어가는 페이지들에서 재사용을 위해 컴포넌트화 했고 ,  cache개념이 쓰이는 부분을 커스텀훅으로 만들어서 재사용했습니다.
+
+### 5. 각 라우터에서 공통적으로 쓰일 컴포넌트들을 /src/components 하위 파일로 정리했습니다.  
+💡 이유 : HomePage, TopRatedPage, NowPlayingPage, UpComingPage, SearchPage에서, 같은 구조의 카드 컴포넌트 형식으로 영화정보를 구성하여 보여주려고 하기 때문에 분리하여 구성했습니다. 
+ - Card(카드)
+ - CardContainer(Card를 구성하는 컨태이너)
+ - Container(CardContainer를 구성하는 컨태이너)  
+
+## API Response 데이터 캐쉬
+### 1. 캐싱 이란?
+- 캐싱은 콘솔에서 볼때는 데이터가 업데이트 되고 있으나, 실제로 서버에 요청은 날리지 않는 것 입니다.
+- 전에 가져온 데이터나 계산된 결과값의 복사본을 저장하여, 처리속도를 향상시키고 이를 통해 이후 요청을 더 빠르게 처리할 수 있습니다.
+
+### 2. 사용 라이브러리
+- 캐싱 기능을 사용하기 위해, React Query 라이브러리의 useInfiniteQuery 훅을 사용했습니다.
+- React Query는, 유니크한 키값으로 구분하여 데이터 캐싱이 가능합니다. 문자열과 배열이 사용가능하지만, 컨벤션을 맞추기 위해 보통 배열을 사용합니다.
+- useQuery와 useInfiniteQuery는 유니크한 키값, Promise를 리턴하는 함수, 옵션을 사용할 수 있습니다.
+- staletime은 캐시 데이터의 신선한 상태에 대한 옵션입니다. 따로 설정해주지 않으면, 캐싱 데이터는 항상 stale 하다고 여겨져 서버에 계속적인 요청을 하게됩니다.
+- cachetime은 메모리에 저장되어 있는 캐시 데이터가 언제까지 유지되는지에 대한 옵션입니다.
+- 캐싱된 데이터는 QueryClient()를 통해 조회할 수 있습니다. (+ queriesMap)
+

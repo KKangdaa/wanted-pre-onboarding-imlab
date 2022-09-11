@@ -7,7 +7,6 @@ export const GlobalStyle = createGlobalStyle`
     body,
     html {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 62.5%;
     box-sizing: border-box;
     background-color: ${theme.colors.BACKGROUND};
 
